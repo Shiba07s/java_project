@@ -22,7 +22,7 @@ pipeline {
         stage("build code"){
             steps {
                 echo "build image"
-                sh "docker build -t java_project.jar ."
+                sh "docker build -t login-docker.jar ."
             }
             
         }
@@ -30,9 +30,9 @@ pipeline {
             steps {
                  echo "Pushing the image to docker hub"
                 withCredentials([usernamePassword(credentialsId:"dockerHub",passwordVariable:"dockerHubPass",usernameVariable:"dockerHubUser")]){
-                sh "docker tag java_project.jar ${env.dockerHubUser}/java_project.jar:latest"
+                sh "docker tag login-docker.jar ${env.dockerHubUser}/login-docker.jar:latest"
                 sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPass}"
-                sh "docker push ${env.dockerHubUser}/java_project.jar:latest"
+                sh "docker push ${env.dockerHubUser}/login-docker.jar:latest"
                 }
                  
             }
