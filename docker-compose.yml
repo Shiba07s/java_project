@@ -1,6 +1,6 @@
 version : "3"
 services :
   web :
-     image : shiba07s/login-docker.jar:latest
+     image : shiba07s/ashu-docker.jar:latest
      ports :
          - "8080:8080"
