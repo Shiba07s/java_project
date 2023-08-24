@@ -3,4 +3,4 @@ services :
   web :
      image : shiba07s/login-docker.jar:latest
      ports :
-         - "2020:2020"
+         - "8080:8080"
