@@ -3,4 +3,4 @@ services :
   web :
      image : shiba07s/ashu-docker.jar:latest
      ports :
-         - "8080:8080"
+         - "2020:2020"
