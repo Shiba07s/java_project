@@ -1,6 +1,6 @@
 version : "3"
 services :
   web :
-     image : shiba07s/login.docker.jar:latest
+     image : shiba07s/login-docker.jar:latest
      ports :
          - "2020:2020"
